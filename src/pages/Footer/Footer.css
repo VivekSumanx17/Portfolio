@@ -1,0 +1,104 @@
+.footer{
+    margin-top:80px;
+    padding:20px 0;
+    background:#111;
+    color:#aaa;
+}
+
+/* layout */
+
+.footer-container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:0 20px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+/* icons */
+
+.social-icons{
+    display:flex;
+    gap:20px;
+}
+
+.social-icons a{
+    font-size:22px;
+    color:#aaa;
+    transition:0.3s;
+}
+
+/* hover animation */
+
+.social-icons a:hover{
+    transform:translateY(-4px) scale(1.2);
+    color:white;
+}
+/* ===========================
+        TABLET
+=========================== */
+
+@media (max-width:992px){
+
+.footer{
+
+    padding:22px 0;
+
+}
+
+.footer-container{
+
+    padding:0 25px;
+
+}
+
+}
+/* ===========================
+        MOBILE
+=========================== */
+
+@media (max-width:768px){
+
+.footer{
+
+    padding:28px 0;
+
+}
+
+.footer-container{
+
+    flex-direction:column;
+
+    gap:20px;
+
+    text-align:center;
+
+}
+
+.footer-container p{
+
+    font-size:15px;
+
+}
+
+.social-icons{
+
+    gap:22px;
+
+}
+
+.social-icons a{
+
+    font-size:24px;
+
+}
+
+}

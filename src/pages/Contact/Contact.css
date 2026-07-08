@@ -1,0 +1,352 @@
+.contact{
+    margin:100px auto;
+    margin-top: 0;
+    max-width:1200px;
+    padding:40px;
+}
+
+/* TITLE */
+
+.title{
+    text-align:center;
+    font-size:40px;
+    color:#393838;
+    margin-bottom:60px;
+}
+
+.title::after{
+    content:"";
+    width:100px;
+    height:3px;
+    background:#777777;
+    display:block;
+    margin:15px auto;
+}
+
+/* LAYOUT */
+
+.contact-container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1.2fr;
+
+    gap:70px;
+
+    padding:50px;
+
+    border-radius:30px;
+
+    background:rgba(18,18,18,.45);
+
+    backdrop-filter:blur(20px);
+
+    -webkit-backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+        0 15px 45px rgba(0,0,0,.45),
+        inset 0 1px 0 rgba(255,255,255,.04);
+
+}
+
+/* LEFT INFO */
+
+.contact-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-info h3{
+    font-size:30px;
+    color: white;
+    margin-bottom:18px;
+    font-family: "Cinzel",serif;
+}
+
+.contact-info p{
+    color:#a8a8a8;
+    line-height: 1.8;
+    font-size: 16px;
+    margin-bottom:35px;
+}
+
+/* INFO ITEM */
+
+.info-item{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    padding: 18px 22px;
+    margin-bottom:18px;
+    border-radius: 16px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,.05);
+    transition: .35s;
+}
+.info-item span{
+
+    color:#ddd;
+
+    font-size:16px;
+
+}
+
+/* ICON */
+
+.contact-icon{
+    font-size:24px;
+    color:#d0d0d0;
+    animation:none;
+}
+
+.info-item:hover{
+
+    transform:translateX(8px);
+
+    border-color:rgba(255,255,255,.18);
+
+    background:rgba(255,255,255,.05);
+
+    box-shadow:
+
+        0 0 18px rgba(255,255,255,.05);
+
+}
+
+/* ICON ANIMATION */
+
+@keyframes iconFloat{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-6px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+/* FORM */
+
+.contact-form{
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+}
+
+.contact-form input,
+.contact-form textarea{
+
+    background:#141414;
+    outline: none;
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:14px;
+
+    padding:18px;
+
+    color:white;
+
+    font-size:16px;
+
+    transition:.35s;
+
+}
+.contact-form input:focus,
+.contact-form textarea:focus{
+    
+    border-color:#888;
+    transform:translateY(-2px);
+    box-shadow:
+
+        0 0 18px rgba(255,255,255,.08);
+
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+    color:#777;
+}
+
+.contact-form button{
+    padding:14px;
+    border:none;
+    border-radius:14px;
+    background:#2b2b2b;
+    color:white;
+    font-size:17px;
+    font-weight: 600;
+    cursor:pointer;
+    transition:0.35s;
+}
+
+.contact-form button:hover{
+    background:#3a3a3a;
+    transform:translateY(-4px);
+    box-shadow:
+        0 0 15px rgba(255,255,255,.08),
+        0 0 35px rgba(255,255,255,.04);
+}
+/* ===========================
+        TABLET
+=========================== */
+
+@media (max-width:992px){
+
+.contact{
+
+    padding:30px 20px;
+
+}
+
+.contact-container{
+
+    grid-template-columns:1fr;
+
+    gap:45px;
+
+    padding:35px;
+
+}
+
+.contact-info{
+
+    text-align:center;
+
+}
+
+.info-item{
+
+    justify-content:center;
+
+}
+
+.contact-form{
+
+    max-width:700px;
+
+    width:100%;
+
+    margin:auto;
+
+}
+
+}
+.contact-link{
+
+    color:#ddd;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.contact-link:hover{
+
+    color:white;
+
+}
+/* ===========================
+        MOBILE
+=========================== */
+
+@media (max-width:768px){
+
+.contact{
+
+    padding:20px 15px;
+
+}
+
+.title{
+
+    font-size:34px;
+
+    margin-bottom:40px;
+
+}
+
+.title::after{
+
+    width:90px;
+
+}
+
+.contact-container{
+
+    padding:25px;
+
+    border-radius:22px;
+
+    gap:35px;
+
+}
+
+.contact-info h3{
+
+    font-size:26px;
+
+}
+
+.contact-info p{
+
+    font-size:15px;
+
+}
+
+.info-item{
+
+    padding:15px;
+
+    gap:15px;
+
+}
+
+.contact-icon{
+
+    font-size:20px;
+
+}
+
+.contact-link,
+
+.info-item span{
+
+    font-size:15px;
+
+    word-break:break-word;
+
+}
+
+.contact-form input,
+
+.contact-form textarea{
+
+    padding:16px;
+
+    font-size:15px;
+
+}
+
+.contact-form button{
+
+    padding:16px;
+
+    font-size:16px;
+
+}
+
+}

@@ -1,0 +1,270 @@
+.hero {
+  width: 100%;
+  height: 100vh;
+  /* background: linear-gradient(to bottom, #101010, #222); */
+  overflow: hidden;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===========================
+   Background Text
+=========================== */
+
+.heroText {
+  position: absolute;
+  font-family: "Cinzel", serif;
+  font-size: 10rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: rgba(255,255,255,.15);
+
+  user-select: none;
+  white-space: nowrap;
+
+  left: 50%;
+  top: 45%;
+
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* ===========================
+   Images
+=========================== */
+
+.imageContainer{
+
+    position:absolute;
+
+    bottom:-100px;
+
+    left:52%;
+
+    transform:translateX(-50%);
+
+    width:560px;
+
+    height:760px;
+
+    z-index:3;
+
+}
+
+.imageContainer img {
+
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  left: 0;
+  top: 0;
+
+  pointer-events: none;
+}
+
+.baseImage{
+  z-index:2;
+}
+
+.hoverImage {
+  z-index: 3;
+  transition: mask-position .05s linear;
+  pointer-events: none;
+}
+
+/* ===========================
+   Floating
+=========================== */
+
+@keyframes floating{
+
+0%{
+transform:translateX(-50%) translateY(0);
+}
+
+50%{
+transform:translateX(-50%) translateY(-12px);
+}
+
+100%{
+transform:translateX(-50%) translateY(0);
+}
+
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+.hero .content{
+
+position:absolute;
+
+left:12%;
+bottom:12%;
+
+z-index:10;
+
+}
+
+.buttn{
+
+display:flex;
+
+gap:18px;
+
+}
+
+.buttn a{
+
+text-decoration:none;
+
+padding:14px 32px;
+
+border:2px solid rgba(255,255,255,.25);
+
+border-radius:10px;
+
+color:white;
+
+font-weight:600;
+
+backdrop-filter:blur(12px);
+
+background:rgba(255,255,255,.06);
+
+transition:.3s;
+
+}
+
+.buttn a:hover{
+
+background:white;
+
+color:black;
+
+transform:translateY(-5px);
+
+box-shadow:0 15px 35px rgba(255,255,255,.15);
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+@media (max-width:992px){
+
+.hero{
+
+    min-height:100vh;
+
+}
+
+.heroText{
+
+    font-size:6rem;
+
+    top:32%;
+
+}
+
+.imageContainer{
+
+    width:430px;
+
+    height:620px;
+
+    left:50%;
+
+    bottom:-60px;
+
+}
+
+.hero .content{
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    bottom:4%;
+
+}
+
+.buttn{
+
+    justify-content:center;
+
+}
+
+}
+@media (max-width:768px){
+
+.hero{
+
+    min-height:100vh;
+
+}
+
+.heroText{
+
+    font-size:3.5rem;
+
+    text-align:center;
+
+    width:100%;
+
+    line-height:1.2;
+
+    top:33%;
+
+}
+
+.imageContainer{
+
+    width:340px;
+
+    height:500px;
+
+    left:50%;
+
+    bottom:40px;
+
+}
+
+.hero .content{
+
+    width:100%;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    bottom:25px;
+
+}
+
+.buttn{
+
+    justify-content:center;
+
+    gap:15px;
+    
+
+}
+
+.buttn a{
+
+    padding:12px 26px;
+
+    font-size:15px;
+
+}
+
+}
