@@ -59,8 +59,8 @@ const projects = [
     img: img5,
     desc: "Responsive React portfolio showcasing projects, technical skills, certifications, and contact information.",
     skills: ["React", "Vite", "EmailJS"],
-    github: "https://github.com/yourusername/portfolio",
-    live: "https://your-live-demo.com"
+    github: "https://github.com/VivekSumanx17/Portfolio",
+    live: "https://portfolio-zeta-mauve-y8av122bey.vercel.app/"
   },
   {
     title: "Quiz Management System",
